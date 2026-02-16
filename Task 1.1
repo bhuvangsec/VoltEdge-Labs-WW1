@@ -1,0 +1,72 @@
+A typical RISC processor uses a 5-stage pipeline. The stages and pipeline registers are:
+Where:
+
+IF → Instruction Fetch
+
+ID → Instruction Decode
+
+EX → Execute
+
+MEM → Memory Access
+
+WB → Write Back
+
+Pipeline registers are used to store data between each stage.
+
+2. Basic Pipeline Datapath
+
+Main components used in the pipeline are:
+
+Program Counter (PC)
+
+Instruction Memory
+
+Register File
+
+ALU
+
+Data Memory
+
+Control Unit
+
+Datapath for ADD Instruction
+Means: R1 = R2 + R3
+
+Flow of ADD instruction:
+
+IF → Instruction is fetched
+
+ID → Registers R2 and R3 are read
+
+EX → ALU performs addition
+
+MEM → No memory operation (skipped)
+
+WB → Result is written to R1
+Datapath for LOAD Instruction
+
+Means: R1 = Memory[R2 + 4]
+
+Flow of LOAD instruction:
+
+IF → Instruction is fetched
+
+ID → Base register R2 is read
+
+EX → Address is calculated (R2 + 4)
+
+MEM → Data is read from memory
+
+WB → Data is written to R1
+
+Hazard Detection Unit Placement
+
+The Hazard Detection Unit is placed in the Instruction Decode (ID) stage, near the:
+
+Register File
+
+Control Unit
+
+ID/EX Register
+
+The 5-stage pipeline improves performance by executing multiple instructions simultaneously. ADD instruction mainly uses ALU, while LOAD instruction uses ALU and memory. The hazard detection unit helps in avoiding wrong execution due to dependencies.

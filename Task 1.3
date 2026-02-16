@@ -1,0 +1,31 @@
+MIPS Instruction Formats (Theory Only)
+MIPS architecture uses three main types of instruction formats. All MIPS instructions are of fixed length (32 bits), but the arrangement of fields is different for different operations. These formats help the processor in easy decoding and execution.
+1. R-Type (Register Type) Format
+R-Type format is used for register-to-register operations such as arithmetic and logical instructions.
+It is mainly used for operations like addition, subtraction, AND, OR, etc.
+Fields in R-Type:
+Opcode (6 bits)
+Source Register (rs – 5 bits)
+Target Register (rt – 5 bits)
+Destination Register (rd – 5 bits)
+Shift Amount (shamt – 5 bits)
+Function Code (funct – 6 bits)
+In R-type instructions, the actual operation is defined by the function field, while the opcode is usually zero.
+2. I-Type (Immediate Type) Format
+I-Type format is used for instructions that involve immediate values or memory access.
+It is mainly used for load, store, and branch instructions.
+Fields in I-Type:
+Opcode (6 bits)
+Source Register (rs – 5 bits)
+Target Register (rt – 5 bits)
+Immediate Value (16 bits)
+The immediate field is used to store constant values, offsets, or addresses.
+3. J-Type (Jump Type) Format
+J-Type format is used for jump and branch type instructions.
+It is mainly used for changing the program flow.
+Fields in J-Type:
+Opcode (6 bits)
+Address (26 bits)
+The address field is used to specify the target location for the jump instruction.
+Conclusion
+MIPS architecture uses R-type, I-type, and J-type instruction formats to support different types of operations. Because of fixed instruction length and simple formats, MIPS processors are easy to decode and suitable for pipelined execution.

@@ -1,0 +1,14 @@
+RISC (Reduced Instruction Set Computer) and CISC (Complex Instruction Set Computer) are two different processor design approaches. Their main differences are shown in the table below.| Feature                | RISC                                           | CISC                                         | Example Impact                                              |
+| ---------------------- | ---------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| Instruction Length     | Fixed length instructions                      | Variable length instructions                 | Fixed length makes instruction fetching and decoding easier |
+| Memory Access          | Only load and store instructions access memory | Many instructions can access memory directly | RISC supports better pipelining                             |
+| Register Usage         | Mostly register-to-register operations         | Memory-to-register operations are common     | RISC requires more registers                                |
+| Number of Instructions | Small and simple instruction set               | Large and complex instruction set            | CISC reduces program size                                   |
+| Execution Time         | Most instructions execute in single cycle      | Instructions may take multiple cycles        | RISC gives predictable timing                               |
+| Control Unit           | Hardwired control                              | Microprogrammed control                      | RISC is faster but less flexible                            |
+| Pipelining             | Easy to implement                              | Difficult due to complexity                  | RISC gives better performance                               |
+| Compiler Dependency    | More dependent on compiler                     | Less dependent on compiler                   | RISC needs good compiler support                            |
+
+Conclusion
+
+RISC architecture focuses on simplicity and speed, which makes pipelining easier. CISC architecture focuses on reducing program size by using complex instructions. Due to this, modern processors mostly follow RISC or modified RISC principles.
